@@ -1,0 +1,64 @@
+.content-header {
+  border-bottom: 1px solid $color-border;
+
+  &-inner {
+    @include row();
+    @include middle();
+    @include blockCenter();
+  }
+
+  &-title {
+    @include col(12);
+    @include col(lg, 6);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  &-users {
+    @include col(12);
+    @include col(lg, 6);
+    @include row();
+    @include middle();
+  }
+
+  &-pics {
+    @include col(10);
+    &-inner {
+      @include row();
+      @include middle();
+      @include start();
+      margin: -$gutter;
+    }
+    &-col {
+      @include col(2);
+    }
+  }
+
+  &-pic {
+    @include roundPic(2em);
+    margin: 0 auto;
+  }
+
+  &-more {
+    @include roundPic(100%);
+    border: 2px solid $color-link-secondary;
+    color: $color-link-secondary;
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 700;
+    &:hover {
+      border-color: $color-link-primary;
+      color: $color-link-primary;
+    }
+  }
+
+  &-btn {
+    font-size: 1.3rem;
+  }
+
+  &-icon {
+    @include col(2);
+    border-left: 1px solid $color-border;
+  }
+
+}

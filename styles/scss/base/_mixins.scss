@@ -34,3 +34,18 @@
   border-left-width: $width / 2;
   border-left-color: transparent;
 }
+
+@mixin roundPic($size) {  
+  display: block;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+}

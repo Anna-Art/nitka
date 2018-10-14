@@ -9,9 +9,13 @@
   }
 
   &-simple {
-    color: $color-icon;
+    .icon {
+      color: $color-icon;
+    }
     &:hover {
-      color: $color-link-primary;
+      .icon {
+        color: $color-link-primary;
+      }
     }
   }
 }
