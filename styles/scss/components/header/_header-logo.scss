@@ -1,0 +1,24 @@
+.header-logo {
+  @include col(12);
+  @include col(md, 4);
+  @include col(lg, 4);
+  &-link {
+    @include row();
+    @include middle();
+    @include center();
+    @include start(md);
+    color: $color-primary;
+    white-space: nowrap;
+    &:hover {
+      color: $color-link-primary;
+    }
+  }
+  &-icon {
+    font-size: 1.1rem;
+  }
+  &-text {
+    padding-left: .5em;
+    font-size: .9rem;
+    font-weight: 700;
+  }
+}

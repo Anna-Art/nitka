@@ -1,0 +1,53 @@
+@import 'header-logo';
+@import 'header-search';
+@import 'header-user';
+
+.header {
+  @include row();
+  @include between();
+  @include middle();
+  background: $bg-secondary;
+  border-bottom: 1px solid $color-border;
+  box-shadow: 0 1px 3px $color_shadow;
+  color: $color-primary;
+  
+  &-main {
+    @include col(12);
+    @include col(md, 8);
+    @include col(lg, 8);
+    &-inner {
+      @include row();
+      @include start();
+      @include end(md);
+      @include middle();
+      margin: -#{$gutter};
+    }
+
+    &-col {
+      @include col(12);
+      position: relative;
+      &:not(:first-child) {
+        &:before {
+          display: block;
+          width: 1px;
+          content: '';
+          background: $color-border;
+          position: absolute;
+          top: 0;
+          left: -.5px;
+          bottom: 0;
+        }
+      }
+
+      &.-search {
+        @include col(md, 7);
+        @include col(lg, 4);
+      }
+      &.-user {
+        @include col(md, 5);
+        @include col(lg, 2);
+      }
+    }
+  }
+
+}

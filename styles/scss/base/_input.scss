@@ -1,0 +1,11 @@
+.input {
+
+  &-text {
+    display: block;
+    padding: $gutter / 2;
+    border: 0;
+    outline: none;
+    color: $color-primary;
+  }
+
+}

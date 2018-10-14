@@ -1,0 +1,26 @@
+.header-search {
+  position: relative;
+
+  &-input {
+    display: block;
+    width: 100%;
+    padding-left: 2 * $gutter;
+    font-size: .6rem;
+    position: relative;
+    z-index: 10;
+    @media #{$breakpoint-lg-up} {
+      font-size: .8rem;
+    }
+  }
+
+  &-btn {
+    display: block;
+    height: 100%;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+
+}

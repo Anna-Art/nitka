@@ -1,0 +1,37 @@
+.header-user {
+  @include row();
+  @include middle();
+  
+  &-pic {
+    display: block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      display: block;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &-arrow {
+    width: $gutter;
+    padding-left: $gutter;
+    &:before,
+    &:after {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    &:before {
+      @include arrowUp(8px, 4px, $color-icon);
+      margin-bottom: 4px;
+    }
+    &:after {
+      @include arrowDown(8px, 4px, $color-icon);
+      margin-top: 4px;
+    }
+  }
+}

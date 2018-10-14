@@ -1,0 +1,17 @@
+.btn {
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: none;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &-simple {
+    color: $color-icon;
+    &:hover {
+      color: $color-link-primary;
+    }
+  }
+}

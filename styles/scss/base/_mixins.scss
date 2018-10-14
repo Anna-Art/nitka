@@ -4,3 +4,33 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@mixin arrowUp($width, $height, $color) {
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  border-style: solid;
+  border-top: 0;
+  border-right-width: $width / 2;
+  border-right-color: transparent;
+  border-bottom-width: $height;
+  border-bottom-color: $color;
+  border-left-width: $width / 2;
+  border-left-color: transparent;
+}
+
+@mixin arrowDown($width, $height, $color) {
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  border-style: solid;
+  border-top-width: $height;
+  border-top-color: $color;
+  border-right-width: $width / 2;
+  border-right-color: transparent;
+  border-bottom: 0;
+  border-left-width: $width / 2;
+  border-left-color: transparent;
+}
