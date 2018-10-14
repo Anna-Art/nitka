@@ -1,0 +1,6 @@
+@mixin blockCenter($minW: $sm-start, $maxW: $xl-start) {
+  min-width: $minW;
+  max-width: $maxW;
+  margin-right: auto;
+  margin-left: auto;
+}

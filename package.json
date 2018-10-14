@@ -1,0 +1,23 @@
+{
+  "name": "nitka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "@drewbot/sass-flexbox-grid": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anna-Art/nitka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anna-Art/nitka/issues"
+  },
+  "homepage": "https://github.com/Anna-Art/nitka#readme"
+}

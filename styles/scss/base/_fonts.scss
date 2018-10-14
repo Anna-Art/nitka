@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import 'icons/icons';
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$min_width: $sm-start;
+$max_width: $xl-start;
+$min_font: 12px;
+$max_font: 18px;
+$min_font_md: 16px;
+$max_font_md: 24px;
+$min_font_sm: 20px;
+$max_font_sm: 28px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  @media (min-width: $md-start) and (max-width: $md-max) {
+    @include fluid-type($min_width, $max_width, $min_font_md, $max_font_md);
+  }
+  @media (max-width: $lg-start) {
+    @include fluid-type($min_width, $max_width, $min_font_sm, $max_font_sm);
+  }
+}

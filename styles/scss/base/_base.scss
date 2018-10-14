@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+@import 'grids';
+@import 'fonts';
+@import 'icons';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  min-width: $sm-start;
+  background: $bg-primary;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  border: 0;
+}
+
+#root {
+  @include row();
+  overflow: hidden;
+  background: $bg-primary;
+}
+
+.main-container {
+  display: flex;
+  overflow: hidden;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  min-width: $sm-start;
+  min-height: 100vh;
+}
