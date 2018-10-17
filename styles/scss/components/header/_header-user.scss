@@ -1,6 +1,7 @@
 .header-user {
   @include row();
   @include middle();
+  @include end();
   
   &-pic {
     @include roundPic(2em);
@@ -15,12 +16,12 @@
       margin-left: auto;
     }
     &:before {
-      @include arrowUp(8px, 4px, $color-icon);
-      margin-bottom: 4px;
+      @include arrowUp(6px, 3px, $color-icon);
+      margin-bottom: 3px;
     }
     &:after {
-      @include arrowDown(8px, 4px, $color-icon);
-      margin-top: 4px;
+      @include arrowDown(6px, 3px, $color-icon);
+      margin-top: 3px;
     }
   }
 }

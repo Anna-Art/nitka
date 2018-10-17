@@ -2,8 +2,9 @@
 $bg_primary: #fbfbfd;
 $bg_secondary: #fff;
 $bg_link_primary: #eaf6ec;
+$bg_link_secondary: #dfe7fa;
 $color_primary: #45464a;
-$color_secondary: #d1d2d4;
+$color_secondary: #a09fa4;
 $color_icon: #a0a1a6;
 $color_link_primary: #3a4;
 $color_link_secondary: #1565d8;
@@ -17,7 +18,7 @@ $color_shadow: #eee;
 $grid-columns: 12 !default; // Set number of columns in the grid
 $xs-max: 319px !default; // Set xs breakpoint's max width
 $sm-max: 479px !default; // Set sm breakpoint's max width
-$md-max: 679px !default; // Set md breakpoint's max width
+$md-max: 839px !default; // Set md breakpoint's max width
 $lg-max: 1399px !default; // Set lg breakpoint's max width
 $gutter: 1em !default; // Set gutter size
 $content-well-max-width: "none" !default; // Set the max-width of the content well

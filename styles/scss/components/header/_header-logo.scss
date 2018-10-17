@@ -1,6 +1,5 @@
 .header-logo {
   @include col(12);
-  @include col(md, 4);
   @include col(lg, 4);
   &-link {
     @include row();

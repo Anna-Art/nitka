@@ -5,6 +5,8 @@
     @include row();
     @include middle();
     @include blockCenter();
+    padding-top: $gutter;
+    padding-bottom: $gutter;
   }
 
   &-title {
@@ -17,20 +19,27 @@
   &-users {
     @include col(12);
     @include col(lg, 6);
-    @include row();
-    @include middle();
+    &-inner {      
+      @include row();
+      @include middle();
+      @include rowReset();
+      flex-wrap: nowrap;
+    }
   }
 
   &-pics {
-    @include col(10);
+    @include col(11);
     &-inner {
       @include row();
       @include middle();
       @include start();
-      margin: -$gutter;
+      @include end(lg);
+      @include rowReset();
+      padding-right: 3 * $gutter / 4;
+      padding-left: 3 * $gutter / 4;
     }
     &-col {
-      @include col(2);
+      padding: $gutter / 4;
     }
   }
 
@@ -57,7 +66,8 @@
   }
 
   &-icon {
-    @include col(2);
+    @include col();
+    flex-grow: 0;
     border-left: 1px solid $color-border;
   }
 

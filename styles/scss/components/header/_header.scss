@@ -13,14 +13,14 @@
   
   &-main {
     @include col(12);
-    @include col(md, 8);
     @include col(lg, 8);
+    border-top: 1px solid $color-border;
     &-inner {
       @include row();
       @include start();
       @include end(md);
       @include middle();
-      margin: -#{$gutter};
+      @include rowReset();
     }
 
     &-col {
@@ -37,16 +37,23 @@
           left: -.5px;
           bottom: 0;
         }
+        @media #{$breakpoint-md-up} {
+          border-top: 0;
+        }
       }
 
       &.-search {
-        @include col(md, 7);
+        @include col(7);
         @include col(lg, 4);
       }
       &.-user {
-        @include col(md, 5);
+        @include col(5);
         @include col(lg, 2);
       }
+    }
+
+    @media #{$breakpoint-lg-up} {
+      border-top: 0;
     }
   }
 

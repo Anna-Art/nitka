@@ -1,0 +1,14 @@
+.footer {
+  border-top: 1px solid $color-border;
+
+  &-inner {
+    @include row();
+    @include blockCenter;
+  }
+
+  &-copy {
+    @include col();
+    color: $color-secondary;
+    font-size: .8rem;
+  }
+}

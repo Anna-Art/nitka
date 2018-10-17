@@ -3,6 +3,7 @@
   border: 0;
   outline: none;
   background: none;
+  white-space: nowrap;
 
   &:disabled {
     cursor: default;

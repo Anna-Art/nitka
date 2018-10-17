@@ -1,0 +1,100 @@
+.folder {
+
+  &-header {
+    @include row();
+    @include between();
+
+    &-col {
+      @include col();
+    }
+
+    &-icon {
+      font-size: 1.2rem;
+    }
+
+    &-title {
+      flex-grow: 0;
+      position: relative;
+      &:before,
+      &:after {
+        position: absolute;
+        left: $gutter / 2;
+      }
+      &:before {
+        @include arrowUp(6px, 3px, $color-icon);
+        top: calc(50% - 5px);
+      }
+      &:after {
+        @include arrowDown(6px, 3px, $color-icon);
+        bottom: calc(50% - 5px);
+      }
+
+      &-inner {
+        @include row();
+        @include middle();
+        cursor: pointer;
+        @include rowReset($gutter / 4);
+        flex-wrap: nowrap;
+        > * {
+          padding: $gutter / 4;
+        }
+        &:hover {
+          > * {
+            color: $color-link-secondary;
+          }
+        }
+      }
+
+      &.-open {
+        &:before {
+          display: none;
+        }
+        &:after {
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+
+    &-line {
+      @include hide(xs);
+      @include show(md, col);
+      flex-grow: 10;
+      position: relative;
+      &:after {
+        display: block;
+        height: 1px;
+        content: '';
+        background: $color-border;
+        position: absolute;
+        top: calc(50% - .5px);
+        right: 0;
+        left: 0;
+      }
+    }
+
+    &-btns {
+      flex-grow: 0;
+      flex-shrink: 0;
+      &-inner {
+        @include row();
+        @include middle();
+        @include rowReset($gutter / 4);
+        flex-wrap: nowrap;
+        > * {
+          padding: $gutter / 4;
+        }
+      }
+    }
+  }
+
+  &-title {
+    font-size: .8rem;
+    font-weight: 700;
+  }
+
+  &-counter {
+    font-size: .8rem;
+    color: $color-icon;
+  }
+
+}

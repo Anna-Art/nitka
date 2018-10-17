@@ -1,0 +1,15 @@
+.folder-section {
+  padding: $gutter;
+
+  &-inner {
+    @include row();
+    @include rowReset();
+  }
+
+  &-col {
+    @include col(12);
+    @include col(md, 6);
+    @include col(lg, 3);
+  }
+
+}
